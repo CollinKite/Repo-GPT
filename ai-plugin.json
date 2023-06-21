@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Code Helper Plugin",
+    "name_for_model": "code_helper",
+    "description_for_human": "Plugin to provide assistance on your code by accessing your project files automatically.",
+    "description_for_model": "Plugin for accessing code files and providing assistance on those files.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:5000/openapi.yaml"
+    },
+    "logo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Robot-framework-logo.png",
+    "contact_email": "me@collinkite.com",
+    "legal_info_url": "http://www.example.com/legal"
+}

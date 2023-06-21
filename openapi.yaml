@@ -1,0 +1,45 @@
+openapi: 3.0.1
+info:
+  title: Code Helper Plugin
+  description: A plugin to access user's code files and provide assistance.
+  version: 'v1'
+servers:
+  - url: http://localhost:5000
+paths:
+  /files:
+    get:
+      operationId: getFiles
+      summary: Retrieve the list of files in the selected folder
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /file:
+    post:
+      operationId: getFileContents
+      summary: Get the contents of a specific file
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                path:
+                  type: string
+                  description: Path to the file, relative to the selected folder
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  contents:
+                    type: string
