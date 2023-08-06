@@ -9,9 +9,9 @@
     },
     "api": {
         "type": "openapi",
-        "url": "http://localhost:5000/openapi.yaml"
+        "url": "http://localhost:5001/openapi.yaml"
     },
     "logo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Robot-framework-logo.png",
     "contact_email": "me@collinkite.com",
-    "legal_info_url": "http://www.example.com/legal"
+    "legal_info_url": "https://collinkite.com"
 }

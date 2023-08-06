@@ -49,6 +49,12 @@ def get_files():
     files = []
     with ThreadPoolExecutor() as executor:
         for dirpath, dirnames, filenames in os.walk(folder_path):
+            # Check if the current directory is or is a subdirectory of .git or node_modules
+            if ".git" in dirnames:
+                dirnames.remove(".git")
+            if "node_modules" in dirnames:
+                dirnames.remove("node_modules")
+
             files.extend(executor.map(fetch_files, [dirpath]*len(filenames), filenames))
     # Return the file list
     return jsonify(files)
@@ -79,4 +85,4 @@ def get_file_contents():
 
 if __name__ == "__main__":
     select_folder()
-    app.run(port=5000)
+    app.run(port=5001)
